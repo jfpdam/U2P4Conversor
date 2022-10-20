@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">U2P4Conversor</string>
+    <string name="tvInfo">Conversor de pulgadas a centimetros</string>
+    <string name="tvHintPedir">Introduce las pulgadas</string>
+    <string name="btConvertir">Convertir</string>
+    <string name="etHintResult">Resultado</string>
+</resources>
