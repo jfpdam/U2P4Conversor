@@ -4,4 +4,7 @@
     <string name="tvHintPedir">Introduce las pulgadas</string>
     <string name="btConvertir">Convertir</string>
     <string name="etHintResult">Resultado</string>
+    <string name="btCentometros">Centimetros</string>
+    <string name="tbPulgadas">Pulgadas</string>
+    <string name="tvResultado">Resultado:</string>
 </resources>

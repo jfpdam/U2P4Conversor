@@ -40,16 +40,31 @@
         android:autofillHints="" />
 
     <Button
-        android:id="@+id/btConvert"
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginRight="8dp"
-        android:text="@string/btConvertir"
+        android:text="@string/tbPulgadas"
+        app:layout_constraintEnd_toEndOf="@+id/tvTitel"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/etPulgada"
+        tools:layout_editor_absoluteY="153dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btCentometros"
+        app:layout_constraintEnd_toEndOf="@+id/etPulgada"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="@+id/etPulgada"
-        app:layout_constraintRight_toRightOf="@+id/etPulgada"
-        app:layout_constraintTop_toBottomOf="@+id/etPulgada" />
+        app:layout_constraintStart_toStartOf="@+id/tvTitel"
+        tools:layout_editor_absoluteY="153dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="198dp"
+        tools:layout_editor_absoluteY="218dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
