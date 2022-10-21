@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">U2P4Conversor</string>
+    <string name="tvInfo">Conversor Universal</string>
+    <string name="tvHintPulgada">Introduce las pulgadas</string>
+    <string name="tvHintMoneda">Introduce la moneda</string>
+    <string name="tvHintGigas">Introduce los Gigas</string>
+    <string name="btEuro">Euro</string>
+    <string name="btDolar">Dolar</string>
+    <string name="btGigas">Giga</string>
+    <string name="btTeras">Tera</string>
+    <string name="btConvertir">Convertir</string>
+    <string name="etHintResult">Resultado</string>
+    <string name="btCentometros">Centimetros</string>
+    <string name="tbPulgadas">Pulgadas</string>
+    <string name="tvResultado">Resultado:</string>
+    <string name="tvError">Introduzca un numero\nmayor que 0</string>
+</resources>

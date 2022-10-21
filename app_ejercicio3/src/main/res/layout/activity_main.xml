@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/metro"
     tools:context=".MainActivity">
 
     <TextView
@@ -28,6 +27,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginRight="8dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/tvHintPedir"
         android:inputType="numberDecimal"
@@ -36,8 +36,7 @@
         android:textColorHint="#757575"
         app:layout_constraintLeft_toLeftOf="@+id/tvTitel"
         app:layout_constraintRight_toRightOf="@+id/tvTitel"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitel"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/tvTitel" />
 
     <Button
         android:id="@+id/btPulgadas"
@@ -84,9 +83,9 @@
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/etValor"
-        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.498" />
+        app:layout_constraintVertical_bias="0.394" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
