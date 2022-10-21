@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -15,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btCentimetro, btPulgada;
     EditText etValor;
-    TextView tvResultado;
+    TextView tvResultado, tvError;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState != null){
             tvResultado.setText(savedInstanceState.getString("resultado"));
+            if (etValor.getText().toString().equalsIgnoreCase("0")){
+                tvError.setVisibility(View.VISIBLE);
+            }
         }
     }
 
@@ -34,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         tvResultado = findViewById(R.id.tvResultado);
         btCentimetro = findViewById(R.id.btCentimetros);
         btPulgada = findViewById(R.id.btPulgadas);
+        tvError = findViewById(R.id.tvError);
+        tvError.setVisibility(View.INVISIBLE);
 
         btPulgada.setOnClickListener(view ->{
            try {
@@ -52,15 +58,38 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private String convertitPulgadas(String centimetros) {
-        double pulgadaValue = Double.parseDouble(centimetros) * 2.54;
-        return String.format("%.2f", pulgadaValue);
+    private String convertitPulgadas(String Pulgadas) {
+
+        double a = Double.parseDouble(Pulgadas);
+        double result = 0;
+        try {
+            if (a >= 1){
+                result = Double.parseDouble(Pulgadas) * 2.54;
+                tvError.setVisibility(View.INVISIBLE);
+            }else{
+                tvError.setVisibility(View.VISIBLE);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return String.format("%.2f", result);
     }
 
-    private String convertitCentimetros(String pulgada) {
+    private String convertitCentimetros(String centimetros) {
 
-        double pulgadaValue = Double.parseDouble(pulgada) / 2.54;
-        return String.format("%.2f", pulgadaValue);
+        double a = Double.parseDouble(centimetros);
+        double result = 0;
+        try {
+            if (a >= 1){
+                result = Double.parseDouble(centimetros) / 2.54;
+                tvError.setVisibility(View.INVISIBLE);
+            }else{
+                tvError.setVisibility(View.VISIBLE);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return String.format("%.2f", result);
     }
 
     @Override
