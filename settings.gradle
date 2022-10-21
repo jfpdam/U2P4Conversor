@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "U2P4Conversor"
-include ':app', ':app_ejercicio1', ':app_ejercicio2'
+include ':app', ':app_ejercicio1', ':app_ejercicio2', ':app_ejercicio3'
